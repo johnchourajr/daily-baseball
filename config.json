@@ -1,0 +1,8 @@
+{
+  "team_focus": "dodgers",
+  "team_bias": 0.5,
+  "_help": {
+    "team_focus": "Name of a data/<team>.json bank to mix in, or null for league-wide only.",
+    "team_bias": "0.0-1.0 — share of the By the Numbers slot and quote slot drawn from the team bank. 0.5 = about half the days."
+  }
+}

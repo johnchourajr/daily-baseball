@@ -1,0 +1,198 @@
+Produce John's "Daily Baseball" fun-facts email and deliver it to him. One recipient, no mailing list.
+
+THIS TASK IS SELF-CONTAINED. Everything needed is below. Do NOT look for a repo, local folder, device bridge, or any file on John's Mac — this runs in the cloud and none of that is reachable. Do NOT run a script. Do NOT invent any fact not listed below.
+
+STEP 1 — Get today's date. Compute N = day of the year (Jan 1 = 1, Feb 1 = 32, etc.).
+
+STEP 2 — HISTORY (the only live lookup). WebFetch https://www.baseball-almanac.com/history/today.php?d=MM-DD using today's MM-DD. Ask for the "This Day in Baseball History" events verbatim as "YEAR — event". Keep the 4-5 most interesting (records, milestones, famous names, firsts). If the fetch fails or is empty, SKIP the history section — do not invent events.
+
+STEP 3 — Pick by index. Lists below are numbered from 0; use index (N mod COUNT):
+  TERM OF THE DAY : TERMS (41)
+  BY THE NUMBERS  : if N is even -> DODGERS FACTS (20); if N is odd -> STATS (30)
+  RULE CHANGE     : RULES (25)
+  CLOSING QUOTE   : if N mod 3 == 0 -> DODGERS QUOTES (12); else QUOTES (20)
+
+STEP 4 — Compose exactly this plain-text shape:
+
+Daily Baseball — <Month Day>
+fun facts from the archives
+
+THIS DAY IN BASEBALL HISTORY
+  · <event>
+  · <event>
+
+TERM OF THE DAY — <term name>
+  <definition>
+
+BY THE NUMBERS
+  <fact>
+
+RULE CHANGE — <year>
+  <rule text>
+
+  "<quote>"
+  — <speaker>
+
+Facts from baseball-almanac.com and the Dickson Baseball Dictionary.
+
+STEP 5 — DELIVER: output that finished email as your FINAL message, verbatim, with no preamble, no summary, no commentary, and no explanation of your picks. That text rides along in this task's completion notification to John's inbox — it IS the email. Nothing else belongs in the final message. Do not create a Gmail draft (the connected Gmail can only draft, never send).
+
+===== TERMS (41) =====
+0. Can of corn — An easily caught, high lazy fly ball that lets a fielder camp under it. (first used 1926)
+1. Baltimore chop — A ball chopped down near the plate that bounces so high the batter can beat it out for a hit.
+2. Texas Leaguer — A cheap hit that loops just over the infielders but drops in front of the outfielders. (first used 1892)
+3. Southpaw — A left-handed pitcher or thrower. (first used 1869)
+4. Rhubarb — A noisy on-field argument or ruckus with the umpires.
+5. Bullpen — The area where relief pitchers warm up during a game — and, by extension, a team's whole relief staff.
+6. Ace — A team's best pitcher, usually a starter and the rock of the rotation. (Earliest sense: a run or score in 1840s baseball.) (first used 1902)
+7. Dinger — A home run. (first used 1974)
+8. Tater — A home run.
+9. Dying quail — A pop fly that drops suddenly, like a bird shot on the wing, often falling between fielders for a hit. (first used 1947)
+10. Frozen rope — A hard-hit line drive on a rigid, low, straight path that seems to defy gravity. (first used 1938)
+11. Gopher ball — A pitch destined to be hit for a home run — one that will 'go for' extra bases. (first used 1930)
+12. Hot corner — Third base. (first used 1889)
+13. Moon shot — A home run, especially one hit a very long distance. (first used 1959)
+14. Pepper — A fast, close-range pregame drill where a batter taps quick grounders to a cluster of fielders who fire the ball right back. (first used 1914)
+15. Seeing-eye single — A softly hit single that sneaks through the infield as if the ball had eyes.
+16. Shoestring catch — A running catch made at the fielder's shoe tops, just before the ball hits the ground. (first used 1904)
+17. Twin killing — A double play. (first used 1920)
+18. Wheelhouse — The part of the strike zone where a batter swings with the most power; hang a pitch there and invite a home run. (first used 1959)
+19. Cup of coffee — A brief trial in the major leagues by a minor-league player — figuratively, just long enough to drink a cup of coffee. (first used 1908)
+20. Uncle Charlie — A curveball, especially a big sweeping one. (first used 1933)
+21. Cheese — A fastball. 'High cheese' is one up and in. (first used 1975)
+22. Chin music — A brushback pitch thrown so high and inside the batter can supposedly hear it buzz past his jaw. (first used 1867)
+23. Circus catch — A spectacular catch — a jump, dive, flip, or roll — suggesting a circus acrobat. (first used 1878)
+24. Cellar — Last place — the position held by the team with the worst record. (first used 1907)
+25. Closer — The relief pitcher used to get the final outs and protect a late lead. (first used 1977)
+26. Crooked number — Any inning total greater than one — so called for the curves in the numerals 2 through 9. (first used 1978)
+27. Ducks on the pond — Baserunners waiting to be driven home. (first used 1921)
+28. Golden sombrero — The dubious mark for striking out four times in a single game. (first used 1979)
+29. Mendoza Line — The .200 batting-average threshold separating adequate hitters from the rest. (first used 1982)
+30. Meatball — An easy-to-hit pitch served right down the middle. (first used 1912)
+31. Immaculate inning — A half-inning in which a pitcher strikes out all three batters on exactly nine pitches. (first used 2008)
+32. Warning track — The dirt or cinder strip inside the outfield wall that warns a fielder, by feel underfoot, that the wall is near.
+33. Worm burner — A ball hit so hard and low it skids across the ground without bouncing.
+34. Pickle — A rundown — a baserunner trapped between two bases with fielders closing in. (Also, as a verb, to hit a ball very hard.) (first used 1908)
+35. Bandbox — A ballpark whose small dimensions make home runs easy — John Updike's 'lyric little green bandbox' was Fenway. (first used 1894)
+36. Submariner — A pitcher who throws with an underhand, submarine-style delivery.
+37. Payoff pitch — The pitch thrown on a full count (3-2) — barring a foul, it decides the at-bat.
+38. Spitball — A late-breaking pitch thrown off a ball loaded with saliva, banned in 1920 for hygiene and to boost offense. (first used 1902)
+39. Knuckleball — A slow pitch thrown with almost no spin so it flutters, darts, and dips unpredictably — sometimes moving 11 inches. (first used 1907)
+40. Screwball — A pitch that breaks the opposite way from a curveball, thrown with an inward twist of the wrist. (Also: a zany player.) (first used 1921)
+
+===== STATS (30) — numbers hand-verified; use exactly as written =====
+0. Barry Bonds holds the career home run record with 762.
+1. Hank Aaron hit 755 career home runs, the record from 1974 until 2007.
+2. Babe Ruth finished his career with 714 home runs.
+3. Albert Pujols retired with 703 home runs, the fourth-highest total in history.
+4. Willie Mays hit 660 career home runs.
+5. Barry Bonds holds the single-season home run record with 73, set in 2001.
+6. Mark McGwire hit 70 home runs in 1998, breaking a record that had stood since 1961.
+7. Sammy Sosa hit 60 or more home runs in three different seasons — and never once led the league.
+8. Roger Maris hit 61 home runs in 1961, breaking Babe Ruth's 34-year-old record of 60.
+9. Aaron Judge hit 62 home runs in 2022, the American League record.
+10. Mike Schmidt hit 509 home runs as a third baseman, the most at the position.
+11. Pete Rose is the all-time hits leader with 4,256.
+12. Ty Cobb collected 4,189 career hits, a record that stood for over 50 years.
+13. Ichiro Suzuki collected 262 hits in 2004, the most in a single season.
+14. Ty Cobb's career batting average of .366 is the highest in MLB history.
+15. Rogers Hornsby batted .424 in 1924 — and averaged .402 across the five seasons from 1921 to 1925.
+16. Hugh Duffy batted .440 in 1894, the highest single-season average ever recorded.
+17. Nap Lajoie hit .426 in 1901, the American League record.
+18. Ted Williams hit .406 in 1941 — no one has hit .400 since.
+19. Hank Aaron drove in 2,297 runs, the most in MLB history.
+20. Hack Wilson drove in 191 runs in 1930, a single-season record that still stands.
+21. Jim Bottomley (1924) and Mark Whiten (1993) share the single-game record with 12 RBIs.
+22. Johnny Burnett got nine hits in one game for Cleveland in 1932 — it took 18 innings.
+23. Joe DiMaggio's 56-game hitting streak in 1941 is the longest in MLB history.
+24. Willie Keeler (1897) and Pete Rose (1978) share the second-longest hitting streak at 44 games.
+25. George Sisler hit safely in 41 straight games in 1922.
+26. Benito Santiago hit in 34 straight games as a rookie in 1987.
+27. Cal Ripken Jr. played in 2,632 consecutive games, breaking Lou Gehrig's 'unbreakable' 2,130.
+28. Carl Hubbell won 24 consecutive decisions across the 1936 and 1937 seasons.
+29. Rickey Henderson stole 1,406 bases — the all-time record, nearly 500 ahead of second place.
+
+===== DODGERS FACTS (20) =====
+0. The Dodgers have won seven World Series: 1955 in Brooklyn, then 1959, 1963, 1965, 1981, 1988 and 2020 in Los Angeles.
+1. The franchise was founded in 1890 as the Brooklyn Bridegrooms — the Dodgers name came later.
+2. Ebbets Field opened in 1913 and served as the Dodgers' home for 46 years.
+3. The Dodgers left Brooklyn for Los Angeles in 1958, playing four seasons in the Coliseum before Dodger Stadium opened in 1962.
+4. Jackie Robinson debuted for the Brooklyn Dodgers on April 15, 1947, breaking baseball's color barrier.
+5. Jackie Robinson hit .313 for his career with 1,568 hits, 141 home runs and 203 stolen bases across 11 seasons.
+6. Jackie Robinson won the inaugural Rookie of the Year award in 1947 and the National League MVP in 1949.
+7. In 1962 Jackie Robinson became the first Black player elected to the Hall of Fame — on the first ballot.
+8. Vin Scully called Dodgers games for 67 seasons, the longest tenure of any broadcaster with a single team in sports history.
+9. Sandy Koufax threw four no-hitters, including a perfect game against the Cubs on September 9, 1965.
+10. Sandy Koufax retired at 30, after a 1966 season in which he won 27 games.
+11. Kirk Gibson's pinch-hit walk-off home run in Game 1 of the 1988 World Series came off Dennis Eckersley — Gibson's only plate appearance of the Series.
+12. Orel Hershiser threw 59 consecutive scoreless innings in 1988, breaking Don Drysdale's record of 58 2/3 — also a Dodger.
+13. The Dodgers were the first team to draw three million fans in a season, at Dodger Stadium in 1978.
+14. Roy Campanella won three National League MVP awards (1951, 1953, 1955) as the Dodgers' catcher.
+15. Don Drysdale and Sandy Koufax staged a joint holdout in 1966 — a landmark moment for player leverage.
+16. Zack Wheat holds Dodgers career records for hits (2,804), games (2,322), doubles (464), triples (171) and total bases (4,003).
+17. Duke Snider holds the Dodgers career home run record with 389, and the RBI record with 1,271.
+18. Jackie Robinson's .409 on-base percentage is the highest in Dodgers history.
+19. Pee Wee Reese scored 1,338 runs and drew 1,210 walks as a Dodger — both franchise records.
+
+===== RULES (25) — render as "RULE CHANGE — <year>" =====
+0. 1857 :: A game used to end after the inning in which a team reached 21 runs. This year it became a nine-inning contest won by the higher score.
+1. 1858 :: Called strikes are introduced — before this, a batter could simply wait for a pitch he liked.
+2. 1858 :: A batter is out on a batted ball, fair or foul, if it is caught on the fly OR after one bounce.
+3. 1863 :: Called balls and bases on balls are introduced.
+4. 1864 :: The one-bounce out on fair balls is abolished; a fair ball must now be caught on the fly.
+5. 1868 :: Bat length is limited to 42 inches — still the limit today.
+6. 1870 :: The batter-runner is allowed to overrun first base.
+7. 1871 :: The batter is officially allowed to call for a high or low pitch (a practice since 1864).
+8. 1873 :: The batter's box is introduced.
+9. 1877 :: Canvas bases 15 inches square are introduced, and home plate is placed in the angle formed by the first- and third-base lines.
+10. 1878 :: It took NINE called balls to draw a walk.
+11. 1880 :: A walk drops to seven called balls, and the batter no longer gets a fourth strike.
+12. 1883 :: Six called balls become a base on balls.
+13. 1885 :: One side of the bat is allowed to be flat — a rule rescinded in 1893.
+14. 1887 :: Four called strikes are adopted — for this season only. Walks are also recorded as hits, also for this season only.
+15. 1887 :: The batter is awarded first base when hit by a pitch.
+16. 1887 :: The strike zone is established between the shoulders and the knees.
+17. 1889 :: Four balls finally become a base on balls — the modern standard.
+18. 1891 :: Large padded mitts are allowed for catchers.
+19. 1893 :: The pitching box is eliminated for a rubber slab, moved from 50 feet to 60 feet 6 inches — the distance still used today.
+20. 1894 :: Foul bunts are classified as strikes.
+21. 1895 :: The infield-fly rule is adopted.
+22. 1900 :: Home plate changes from a square to the five-sided figure used today.
+23. 1901 :: Foul balls start counting as strikes until the batter has two strikes.
+24. 1903 :: The height of the mound is limited to 15 inches above the baselines.
+
+===== QUOTES (20) =====
+0. "Age is a case of mind over matter. If you don't mind, it don't matter." — Satchel Paige
+1. "How old would you be if you didn't know how old you were?" — Satchel Paige
+2. "I never threw an illegal pitch. The trouble is, once in a while I toss one that ain't never been seen by this generation." — Satchel Paige
+3. "Just take the ball and throw it where you want to. Throw strikes. Home plate don't move." — Satchel Paige
+4. "Ain't no man can avoid being born average, but there ain't no man got to be common." — Satchel Paige
+5. "Managing is getting paid for home runs someone else hits." — Casey Stengel
+6. "Can't anybody here play this game?" — Casey Stengel
+7. "The secret of managing is to keep the guys who hate you away from the guys who are undecided." — Casey Stengel
+8. "You got to get twenty-seven outs to win." — Casey Stengel
+9. "Been in this game one-hundred years, but I see new ways to lose 'em I never knew existed before." — Casey Stengel
+10. "He'd fall in a sewer and come up with a gold watch." — Casey Stengel on Yogi Berra
+11. "Nice guys finish last." — Leo Durocher
+12. "I don't care if the guy is yellow or black, or if he has stripes like a god-damn zebra. I'm the manager of this team and I say he plays." — Leo Durocher, on Jackie Robinson
+13. "Show me a good loser in professional sports, and I'll show you an idiot." — Leo Durocher
+14. "If you don't win, you're going to be fired. If you do win, you've only put off the day you're going to be fired." — Leo Durocher
+15. "In a year that has been so improbable, the impossible has happened." — Vin Scully
+16. "Statistics are used much like a drunk uses a lamp post: for support, not illumination." — Vin Scully
+17. "Good is not good when better is expected." — Vin Scully
+18. "Baseball is almost the only orderly thing in a very unorderly world. If you get three strikes, even the best lawyer in the world can't get you off." — Bill Veeck
+19. "I try not to break the rules, but merely to test their elasticity." — Bill Veeck
+
+===== DODGERS QUOTES (12) =====
+0. "I bleed Dodger blue and when I die, I'm going to the big Dodger in the sky." — Tommy Lasorda
+1. "I believe managing is like holding a dove in your hand. If you hold it too tightly you kill it, but if you hold it too loosely, you lose it." — Tommy Lasorda
+2. "About the only problem with success is that it does not teach you how to deal with failure." — Tommy Lasorda
+3. "There are three types of baseball players: those who make it happen, those who watch it happen, and those who wonder what happens." — Tommy Lasorda
+4. "I love doubleheaders. That way I get to keep my uniform on longer." — Tommy Lasorda
+5. "To win. Nothing else matters, and nothing else will do." — Sandy Koufax
+6. "I became a good pitcher when I stopped trying to make them miss the ball and started trying to make them hit it." — Sandy Koufax
+7. "Pitching is the art of instilling fear." — Sandy Koufax
+8. "Trying to hit him was like trying to drink coffee with a fork." — Willie Stargell, on Sandy Koufax
+9. "There are two times in my life the hair on my arms has stood up: the first time I saw the ceiling of the Sistine Chapel and the first time I saw Sandy Koufax throw a fastball." — Al Campanis
+10. "I can see how he won twenty-five games. What I don't understand is how he lost five." — Yogi Berra, on Sandy Koufax
+11. "I never want to quit playing ball. They'll have to cut this uniform off of me to get me out of it." — Roy Campanella

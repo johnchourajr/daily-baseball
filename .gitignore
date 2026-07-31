@@ -1,0 +1,12 @@
+# generated emails + rotation state
+/output/*
+!/output/.gitkeep
+
+# python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+build/
+dist/
+_archive/

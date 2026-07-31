@@ -1,0 +1,52 @@
+{
+  "_source": "https://www.baseball-almanac.com/stats.shtml",
+  "_note": "Statistic definitions and formulas, verbatim from Baseball Almanac's Stats 101 pages (offensive, pitching, defensive) plus the abbreviations glossary in abbreviations.json.",
+  "offensive": {
+    "_source": "https://www.baseball-almanac.com/stats.shtml",
+    "stats": [
+      {"name": "Adjusted Production", "abbr": "APRO", "formula": "(On Base Percentage / League OBP) + (Slugging Average / League SA) - 1"},
+      {"name": "Batting Average", "abbr": "AVG", "formula": "Hits / At Bats"},
+      {"name": "Base On Balls Percentage", "abbr": "BB%", "formula": "Total Walks / Plate Appearances"},
+      {"name": "Home Run Ratio", "abbr": "HRR", "formula": "Home Runs / At Bats"},
+      {"name": "Isolated Power", "abbr": "ISO", "formula": "(Total Bases - Hits) / At Bats"},
+      {"name": "Major League Equivalency", "abbr": "MLE", "formula": "Proprietary formula (Bill James / STATS, Inc.)"},
+      {"name": "On Base Percentage", "abbr": "OBP", "formula": "(Hits + Walks + Hit By Pitch) / (At Bats + Walks + Hit By Pitch + Sacrifice Flies)"},
+      {"name": "On Base Plus Slugging", "abbr": "OPS", "formula": "On Base Percentage + Slugging Average"},
+      {"name": "Plate Appearances", "abbr": "PA", "formula": "At Bats + Walks + Hit By Pitch + Sacrifice Hits + Sacrifice Flies + Times Reached on Defensive Interference"},
+      {"name": "Runs Created", "abbr": "RC", "formula": "On Base Percentage x Total Bases"},
+      {"name": "Runs Created Per 25", "abbr": "RC25", "formula": "(Runs Created / Outs) x 25"},
+      {"name": "Slugging Average", "abbr": "SLG", "formula": "(Singles + 2x Doubles + 3x Triples + 4x Home Runs) / At Bats"},
+      {"name": "Strikeout Ratio", "abbr": "SO%", "formula": "Strikeouts / At Bats"},
+      {"name": "Stolen Base Percentage", "abbr": "SB%", "formula": "Stolen Bases / Stolen Base Attempts"},
+      {"name": "Stolen Base Runs", "abbr": "SBR", "formula": "(.3 x Stolen Bases) - (.6 x Caught Stealing)"},
+      {"name": "Total Base Percentage", "abbr": "TBP", "formula": "(Hits + Walks + Hit By Pitch) / (At Bats + Walks + Hit By Pitch)"},
+      {"name": "Total Bases", "abbr": "TB", "formula": "Singles + 2x Doubles + 3x Triples + 4x Home Runs"}
+    ]
+  },
+  "pitching": {
+    "_source": "https://www.baseball-almanac.com/stats2.shtml",
+    "stats": [
+      {"name": "Adjusted Pitching Runs", "abbr": "APR", "formula": "(Innings Pitched / 9) x (League ERA - ERA)", "note": "Runs prevented versus a league-average pitcher in a neutral park."},
+      {"name": "Earned Run Average", "abbr": "ERA", "formula": "(Earned Runs x 9) / Innings Pitched", "note": "The oldest pitching statistic — earned runs allowed per nine innings."},
+      {"name": "Earned Run Average Plus", "abbr": "ERA+", "formula": "League ERA / ERA", "note": "League-normalized ERA."},
+      {"name": "Game Score", "abbr": "GSc", "formula": "Start with 50 points; add 1 point per out recorded (3 per inning), with bonuses and penalties for strikeouts, hits, runs and walks.", "note": "Measures single-game dominance."},
+      {"name": "Opposing Team's Batting Average", "abbr": "OBA", "formula": "Hits Allowed / (Batters Faced - Walks - Hit Batsmen - Sacrifice Hits)"},
+      {"name": "Walks And Hits per Inning Pitched", "abbr": "WHIP", "formula": "(Hits + Walks) / Innings Pitched"},
+      {"name": "Winning Percentage", "abbr": "W%", "formula": "Wins / Decisions"}
+    ],
+    "definitions": [
+      {"name": "Hold", "definition": "Credited to a relief pitcher who enters with a lead, records at least one out, preserves the lead, and hands it to another pitcher."},
+      {"name": "Save", "definition": "Credited to a relief pitcher who finishes a won game without earning the win, provided he meets the qualifying criteria."}
+    ]
+  },
+  "defensive": {
+    "_source": "https://www.baseball-almanac.com/stats3.shtml",
+    "stats": [
+      {"name": "Defensive Average", "abbr": "DA", "formula": "The rate at which fielders turn balls hit into their zone into outs."},
+      {"name": "Fielding Average", "abbr": "FA", "formula": "(Putouts + Assists) / (Putouts + Assists + Errors)"},
+      {"name": "Fielding Runs", "abbr": "FR", "formula": "Weights putouts, assists and double plays, then compares the total to positional norms, expressed in runs."},
+      {"name": "Range Factor", "abbr": "RF", "formula": "((Putouts + Assists) x 9) / Defensive Innings Played", "note": "Plays made per nine innings at a position."},
+      {"name": "Zone Rating", "abbr": "ZR", "formula": "Share of balls hit into a fielder's zone of responsibility that he converts into outs; double plays count as two outs."}
+    ]
+  }
+}
